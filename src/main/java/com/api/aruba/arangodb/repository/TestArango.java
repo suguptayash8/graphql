@@ -4,21 +4,20 @@ package com.api.aruba.arangodb.repository;
 import com.arangodb.springframework.core.ArangoOperations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.ComponentScan;
 import com.api.aruba.arangodb.collection.Character;
+import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
-@ComponentScan("com.arangodb.spring.demo")
-public class CrudRunner implements CommandLineRunner {
+@Component
+public class TestArango {
 
     @Autowired
     private ArangoOperations operations;
     @Autowired
     private CharacterRepository repository;
 
-    @Override
-    public void run(String... args) throws Exception {
+    public void test() throws Exception {
         // first drop the database so that we can run this multiple times with the same dataset
         operations.dropDatabase();
 
