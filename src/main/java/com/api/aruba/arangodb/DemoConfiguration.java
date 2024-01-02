@@ -6,7 +6,6 @@ import com.arangodb.springframework.config.ArangoConfiguration;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@EnableArangoRepositories(basePackages = {"com.api.aruba.arangodb"})
 public class DemoConfiguration implements ArangoConfiguration {
     @Override
     public ArangoDB.Builder arango() {
